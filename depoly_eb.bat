@@ -1,28 +1,29 @@
 @echo off
-SET ENV_NAME=cross-stitch-pattern-env
-SET REGION=us-east-1
+echo Deploying to Elastic Beanstalk environment: cross-stitch-pattern-env
 
-echo Deploying to Elastic Beanstalk environment: %ENV_NAME%
-eb deploy %ENV_NAME% --region %REGION%
+:: Sanitize timestamp
+set HOUR=%TIME:~0,2%
+if "%HOUR:~0,1%"==" " set HOUR=0%HOUR:~1,1%
+set TIMESTAMP=%DATE:~-4%%DATE:~4,2%%DATE:~7,2%_%HOUR%%TIME:~3,2%%TIME:~6,2%
 
-if %ERRORLEVEL% == 0 (
-    echo Deployment successful. Setting environment variables...
-    aws elasticbeanstalk update-environment ^
-      --environment-name %ENV_NAME% ^
-      --region %REGION% ^
-      --option-settings ^
-        Namespace=aws:elasticbeanstalk:application:environment,OptionName=AWS_REGION,Value=us-east-1 ^
-        Namespace=aws:elasticbeanstalk:application:environment,OptionName=DYNAMODB_TABLE_NAME,Value=CrossStitchItems ^
-        Namespace=aws:elasticbeanstalk:application:environment,OptionName=NODE_ENV,Value=production ^
-        Namespace=aws:elasticbeanstalk:application:environment,OptionName=PORT,Value=3000 ^
-        Namespace=aws:elasticbeanstalk:application:environment:OptionName=S3_BUCKET_NAME,Value=cross-stitch-designs-photos
-    if %ERRORLEVEL% == 0 (
-        echo Environment variables set successfully!
-    ) else (
-        echo Failed to set environment variables.
-    )
-) else (
-    echo Deployment failed.
-)
-aws elasticbeanstalk describe-configuration-settings --environment-name %ENV_NAME% --region us-east-1
+:: Clean and create ZIP
+echo Cleaning node_modules and .next
+rmdir /s /q node_modules
+rmdir /s /q .next
+del package-lock.json
+
+echo Installing dependencies
+call npm install
+
+echo Building application
+call npm run build
+
+echo Creating ZIP archive
+zip -r app-%TIMESTAMP%.zip . -x "node_modules/*" ".next/*" ".git/*"
+
+:: Deploy to Elastic Beanstalk
+echo Deploying to Elastic Beanstalk
+eb deploy cross-stitch-pattern-env --region us-east-1
+
+echo Deployment complete
 pause

@@ -8,9 +8,15 @@ export default function DesignPage({ params }: { params: { id: string } }) {
 
     useEffect(() => {
         async function fetchDesign() {
-            const res = await fetch(`/api/designs/${params.id}`);
-            const data = await res.json();
-            setDesign(data.design);
+            try {
+                const res = await fetch(`/api/designs/${params.id}`);
+                if (!res.ok) throw new Error('Failed to fetch design');
+                const data = await res.json();
+                setDesign(data.design);
+            } catch (error) {
+                console.error('Error fetching design:', error);
+                setDesign(null);
+            }
         }
         fetchDesign();
     }, [params.id]);

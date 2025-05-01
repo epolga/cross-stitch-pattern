@@ -1,0 +1,366 @@
+----------------------------------------
+/var/log/eb-engine.log
+----------------------------------------
+2025/05/01 18:41:13.197113 [INFO] Starting...
+2025/05/01 18:41:13.197164 [INFO] Starting EBPlatform-PlatformEngine
+2025/05/01 18:41:13.197190 [INFO] reading event message file
+2025/05/01 18:41:13.197507 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 18:41:13.270578 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 18:41:13.565616 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 18:41:13.859200 [INFO] checking whether command app-deploy is applicable to this instance...
+2025/05/01 18:41:13.859212 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 18:41:13.859215 [INFO] Engine command: (app-deploy)
+
+2025/05/01 18:41:13.859218 [INFO] Downloading EB Application...
+2025/05/01 18:41:13.859220 [INFO] Region: us-east-1
+2025/05/01 18:41:13.859222 [INFO] envID: e-gqvgsjamyt
+2025/05/01 18:41:13.859225 [INFO] envBucket: elasticbeanstalk-us-east-1-358174257684
+2025/05/01 18:41:13.859227 [INFO] accountID: 358174257684
+2025/05/01 18:41:13.859229 [INFO] Using manifest file name from command request
+2025/05/01 18:41:13.859234 [INFO] Manifest name is : manifest_1746124805176
+2025/05/01 18:41:13.859236 [INFO] Download app version manifest
+2025/05/01 18:41:13.859398 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/versions/manifest_1746124805176, expected bucket owner: 358174257684
+2025/05/01 18:41:13.896396 [INFO] Download successful117bytes downloaded
+2025/05/01 18:41:13.896522 [INFO] Trying to read and parse version manifest...
+2025/05/01 18:41:13.896590 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/_versions/cross-stitch-pattern/app-6e20-250501_213945786751, expected bucket owner: 358174257684
+2025/05/01 18:41:13.999944 [INFO] Download successful4769073bytes downloaded
+2025/05/01 18:41:14.007568 [INFO] Executing instruction: ElectLeader
+2025/05/01 18:41:14.007578 [INFO] Running leader election for instance i-07072ab33a3598507...
+2025/05/01 18:41:14.007581 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2025/05/01 18:41:14.007595 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 3d145040-a49a-4347-bcfb-20015c0b5335 --listener-id i-07072ab33a3598507 --region us-east-1
+2025/05/01 18:41:14.336864 [INFO] Instance is Leader.
+2025/05/01 18:41:14.336914 [INFO] Executing instruction: stopSqsd
+2025/05/01 18:41:14.336920 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2025/05/01 18:41:14.336924 [INFO] Executing instruction: PreBuildEbExtension
+2025/05/01 18:41:14.336926 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2025/05/01 18:41:14.336940 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
+2025/05/01 18:41:15.368282 [INFO] Error occurred during build: Command 01_install_dependencies failed
+
+2025/05/01 18:41:15.368309 [ERROR] An error occurred during execution of command [app-deploy] - [PreBuildEbExtension]. Stop running the command. Error: EbExtension build failed. Please refer to /var/log/cfn-init.log for more details. 
+
+2025/05/01 18:41:15.368314 [INFO] Executing cleanup logic
+2025/05/01 18:41:15.368393 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1746124875368,"severity":"ERROR"}]}]}
+
+2025/05/01 18:41:15.369088 [INFO] Platform Engine finished execution on command: app-deploy
+
+2025/05/01 18:43:40.153001 [INFO] Starting...
+2025/05/01 18:43:40.153046 [INFO] Starting EBPlatform-PlatformEngine
+2025/05/01 18:43:40.153073 [INFO] reading event message file
+2025/05/01 18:43:40.153388 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 18:43:40.217108 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 18:43:40.509392 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 18:43:40.790094 [INFO] checking whether command app-deploy is applicable to this instance...
+2025/05/01 18:43:40.790107 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 18:43:40.790110 [INFO] Engine command: (app-deploy)
+
+2025/05/01 18:43:40.790114 [INFO] Downloading EB Application...
+2025/05/01 18:43:40.790117 [INFO] Region: us-east-1
+2025/05/01 18:43:40.790119 [INFO] envID: e-gqvgsjamyt
+2025/05/01 18:43:40.790122 [INFO] envBucket: elasticbeanstalk-us-east-1-358174257684
+2025/05/01 18:43:40.790126 [INFO] accountID: 358174257684
+2025/05/01 18:43:40.790129 [INFO] Using manifest file name from command request
+2025/05/01 18:43:40.790136 [INFO] Manifest name is : manifest_1746124953074
+2025/05/01 18:43:40.790138 [INFO] Download app version manifest
+2025/05/01 18:43:40.790318 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/versions/manifest_1746124953074, expected bucket owner: 358174257684
+2025/05/01 18:43:40.847810 [INFO] Download successful163bytes downloaded
+2025/05/01 18:43:40.847970 [INFO] Trying to read and parse version manifest...
+2025/05/01 18:43:40.848376 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/_versions/cross-stitch-pattern/app-6e20-250501_214210727861, expected bucket owner: 358174257684
+2025/05/01 18:43:40.992792 [INFO] Download successful4769073bytes downloaded
+2025/05/01 18:43:40.996732 [INFO] Executing instruction: ElectLeader
+2025/05/01 18:43:40.996739 [INFO] Running leader election for instance i-07072ab33a3598507...
+2025/05/01 18:43:40.996743 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2025/05/01 18:43:40.996755 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id 505d0781-06f8-4c64-a71b-9984c8792c1c --listener-id i-07072ab33a3598507 --region us-east-1
+2025/05/01 18:43:41.288651 [INFO] Instance is Leader.
+2025/05/01 18:43:41.288704 [INFO] Executing instruction: stopSqsd
+2025/05/01 18:43:41.288709 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2025/05/01 18:43:41.288712 [INFO] Executing instruction: PreBuildEbExtension
+2025/05/01 18:43:41.288714 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2025/05/01 18:43:41.288725 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
+2025/05/01 18:43:42.255872 [INFO] Error occurred during build: Command 01_install_dependencies failed
+
+2025/05/01 18:43:42.255902 [ERROR] An error occurred during execution of command [app-deploy] - [PreBuildEbExtension]. Stop running the command. Error: EbExtension build failed. Please refer to /var/log/cfn-init.log for more details. 
+
+2025/05/01 18:43:42.255915 [INFO] Executing cleanup logic
+2025/05/01 18:43:42.255998 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1746125022255,"severity":"ERROR"}]}]}
+
+2025/05/01 18:43:42.256981 [INFO] Platform Engine finished execution on command: app-deploy
+
+2025/05/01 18:46:02.612361 [INFO] Starting...
+2025/05/01 18:46:02.612407 [INFO] Starting EBPlatform-PlatformEngine
+2025/05/01 18:46:02.612428 [INFO] reading event message file
+2025/05/01 18:46:02.612732 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 18:46:02.675434 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 18:46:02.986141 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 18:46:03.279542 [INFO] checking whether command tail-log is applicable to this instance...
+2025/05/01 18:46:03.279555 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 18:46:03.279557 [INFO] Engine command: (tail-log)
+
+2025/05/01 18:46:03.279613 [INFO] Executing instruction: GetTailLogs
+2025/05/01 18:46:03.279617 [INFO] Tail Logs...
+2025/05/01 18:46:03.281284 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
+
+
+----------------------------------------
+/var/log/eb-hooks.log
+----------------------------------------
+
+
+----------------------------------------
+/var/log/nginx/access.log
+----------------------------------------
+172.31.69.92 - - [01/May/2025:18:31:51 +0000] "GET /favicon.ico HTTP/1.1" 502 150 "-" "Mozilla/5.0 (compatible; CensysInspect/1.1; +https://about.censys.io/)" "167.94.145.98"
+172.31.69.92 - - [01/May/2025:18:31:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:31:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:32:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:32:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:32:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:32:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:32:24 +0000] "GET /login.htm HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.65"
+172.31.69.92 - - [01/May/2025:18:32:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:32:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:32:51 +0000] "GET /login HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.168"
+172.31.69.92 - - [01/May/2025:18:32:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:32:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:33:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:33:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:33:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:33:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:33:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:33:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:33:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:33:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:34:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:34:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:34:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:34:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:34:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:34:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:34:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:34:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:35:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:35:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:35:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:35:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:35:32 +0000] "GET /login.html HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.65"
+172.31.30.8 - - [01/May/2025:18:35:35 +0000] "GET /doc/index.html HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.168"
+172.31.69.92 - - [01/May/2025:18:35:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:35:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:35:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:35:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:36:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:36:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:36:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:36:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:36:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:36:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:36:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:36:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:37:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:37:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:37:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:37:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:37:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:37:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:37:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:37:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:38:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:38:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:38:24 +0000] "GET /remote/login HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.168"
+172.31.69.92 - - [01/May/2025:18:38:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:38:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:38:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:38:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:38:51 +0000] "GET /login.jsp HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.65"
+172.31.30.8 - - [01/May/2025:18:38:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:38:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:39:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:39:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:39:14 +0000] "GET / HTTP/1.1" 502 150 "-" "curl/7.88.1" "222.230.86.123"
+172.31.69.92 - - [01/May/2025:18:39:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:39:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:39:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:39:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:39:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:39:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:40:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:40:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:41:52 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:41:53 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:41:54 +0000] "GET /login HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.65"
+172.31.30.8 - - [01/May/2025:18:42:07 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:42:08 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:42:22 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:42:23 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:42:37 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:42:38 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:44:23 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:44:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:44:27 +0000] "GET /doc/index.html HTTP/1.1" 502 150 "-" "'Mozilla/5.0 (compatible; GenomeCrawlerd/1.0; +https://www.nokia.com/genomecrawler)'" "104.234.115.65"
+172.31.69.92 - - [01/May/2025:18:44:38 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:44:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:44:53 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:44:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:45:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:45:09 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:45:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:45:24 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:45:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:45:39 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.69.92 - - [01/May/2025:18:45:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+172.31.30.8 - - [01/May/2025:18:45:54 +0000] "GET / HTTP/1.1" 502 150 "-" "ELB-HealthChecker/2.0" "-"
+
+
+----------------------------------------
+/var/log/nginx/error.log
+----------------------------------------
+2025/05/01 18:31:51 [error] 2195#2195: *744 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /favicon.ico HTTP/1.1", upstream: "http://127.0.0.1:8080/favicon.ico", host: "54.237.35.44"
+2025/05/01 18:31:54 [error] 2195#2195: *746 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:31:54 [error] 2195#2195: *748 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:09 [error] 2195#2195: *750 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:09 [error] 2195#2195: *752 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:24 [error] 2195#2195: *754 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:24 [error] 2195#2195: *756 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:24 [error] 2195#2195: *742 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /login.htm HTTP/1.1", upstream: "http://127.0.0.1:8080/login.htm", host: "54.237.35.44"
+2025/05/01 18:32:39 [error] 2194#2194: *759 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:39 [error] 2194#2194: *761 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:51 [error] 2194#2194: *763 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET /login HTTP/1.1", upstream: "http://127.0.0.1:8080/login", host: "54.210.106.16"
+2025/05/01 18:32:54 [error] 2194#2194: *765 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:32:54 [error] 2194#2194: *767 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:09 [error] 2194#2194: *769 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:09 [error] 2194#2194: *771 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:24 [error] 2194#2194: *773 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:24 [error] 2194#2194: *775 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:39 [error] 2194#2194: *777 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:39 [error] 2194#2194: *779 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:54 [error] 2194#2194: *781 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:33:54 [error] 2194#2194: *783 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:09 [error] 2194#2194: *785 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:09 [error] 2194#2194: *787 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:24 [error] 2194#2194: *789 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:24 [error] 2195#2195: *791 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:39 [error] 2195#2195: *793 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:39 [error] 2195#2195: *795 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:54 [error] 2195#2195: *797 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:34:54 [error] 2195#2195: *799 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:09 [error] 2195#2195: *801 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:09 [error] 2195#2195: *803 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:24 [error] 2195#2195: *805 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:24 [error] 2195#2195: *807 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:32 [error] 2195#2195: *809 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /login.html HTTP/1.1", upstream: "http://127.0.0.1:8080/login.html", host: "54.237.35.44"
+2025/05/01 18:35:35 [error] 2195#2195: *811 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET /doc/index.html HTTP/1.1", upstream: "http://127.0.0.1:8080/doc/index.html", host: "54.210.106.16"
+2025/05/01 18:35:39 [error] 2195#2195: *813 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:39 [error] 2195#2195: *815 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:54 [error] 2195#2195: *817 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:35:54 [error] 2195#2195: *819 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:09 [error] 2195#2195: *821 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:09 [error] 2194#2194: *823 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:24 [error] 2194#2194: *825 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:24 [error] 2194#2194: *827 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:39 [error] 2194#2194: *829 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:39 [error] 2194#2194: *831 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:54 [error] 2194#2194: *833 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:36:54 [error] 2194#2194: *835 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:09 [error] 2194#2194: *837 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:09 [error] 2194#2194: *839 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:24 [error] 2194#2194: *841 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:24 [error] 2194#2194: *843 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:39 [error] 2194#2194: *845 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:39 [error] 2194#2194: *847 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:54 [error] 2194#2194: *849 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:37:54 [error] 2194#2194: *851 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:09 [error] 2194#2194: *853 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:09 [error] 2195#2195: *855 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:24 [error] 2195#2195: *857 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET /remote/login HTTP/1.1", upstream: "http://127.0.0.1:8080/remote/login", host: "54.210.106.16"
+2025/05/01 18:38:24 [error] 2195#2195: *859 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:24 [error] 2195#2195: *861 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:39 [error] 2195#2195: *863 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:39 [error] 2195#2195: *865 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:51 [error] 2195#2195: *867 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /login.jsp HTTP/1.1", upstream: "http://127.0.0.1:8080/login.jsp", host: "54.237.35.44"
+2025/05/01 18:38:54 [error] 2195#2195: *869 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:38:54 [error] 2195#2195: *871 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:09 [error] 2195#2195: *873 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:09 [error] 2195#2195: *875 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:14 [error] 2195#2195: *867 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "54.237.35.44"
+2025/05/01 18:39:24 [error] 2195#2195: *878 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:24 [error] 2195#2195: *880 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:39 [error] 2195#2195: *882 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:39 [error] 2195#2195: *884 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:54 [error] 2195#2195: *886 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:39:54 [error] 2194#2194: *888 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:40:09 [error] 2194#2194: *890 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:40:09 [error] 2194#2194: *892 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:41:52 [error] 2194#2194: *894 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:41:53 [error] 2194#2194: *896 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:41:54 [error] 2194#2194: *898 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /login HTTP/1.1", upstream: "http://127.0.0.1:8080/login", host: "54.237.35.44"
+2025/05/01 18:42:07 [error] 2194#2194: *900 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:42:08 [error] 2194#2194: *902 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:42:22 [error] 2194#2194: *904 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:42:23 [error] 2194#2194: *906 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:42:37 [error] 2194#2194: *908 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:42:38 [error] 2194#2194: *910 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:23 [error] 2194#2194: *912 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:24 [error] 2194#2194: *914 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:27 [error] 2194#2194: *916 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET /doc/index.html HTTP/1.1", upstream: "http://127.0.0.1:8080/doc/index.html", host: "54.237.35.44"
+2025/05/01 18:44:38 [error] 2194#2194: *918 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:39 [error] 2195#2195: *920 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:53 [error] 2195#2195: *922 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:44:54 [error] 2195#2195: *924 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:09 [error] 2195#2195: *926 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:09 [error] 2195#2195: *928 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:24 [error] 2195#2195: *930 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:24 [error] 2195#2195: *932 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:39 [error] 2195#2195: *934 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:39 [error] 2195#2195: *936 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:54 [error] 2195#2195: *938 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.69.92, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+2025/05/01 18:45:54 [error] 2195#2195: *940 connect() failed (111: Connection refused) while connecting to upstream, client: 172.31.30.8, server: , request: "GET / HTTP/1.1", upstream: "http://127.0.0.1:8080/", host: "172.31.31.45"
+
+
+----------------------------------------
+/var/log/web.stdout.log
+----------------------------------------
+May  1 17:49:10 ip-172-31-31-45 web[2128]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:10 ip-172-31-31-45 web[2128]: > next start
+May  1 17:49:11 ip-172-31-31-45 web[2179]:   â–² Next.js 15.3.1
+May  1 17:49:11 ip-172-31-31-45 web[2179]:   - Local:        http://localhost:8080
+May  1 17:49:11 ip-172-31-31-45 web[2179]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:11 ip-172-31-31-45 web[2179]: âœ“ Starting...
+May  1 17:49:12 ip-172-31-31-45 web[2179]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+May  1 17:49:13 ip-172-31-31-45 web[2251]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:13 ip-172-31-31-45 web[2251]: > next start
+May  1 17:49:14 ip-172-31-31-45 web[2270]:   â–² Next.js 15.3.1
+May  1 17:49:14 ip-172-31-31-45 web[2270]:   - Local:        http://localhost:8080
+May  1 17:49:14 ip-172-31-31-45 web[2270]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:14 ip-172-31-31-45 web[2270]: âœ“ Starting...
+May  1 17:49:14 ip-172-31-31-45 web[2270]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+May  1 17:49:15 ip-172-31-31-45 web[2288]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:15 ip-172-31-31-45 web[2288]: > next start
+May  1 17:49:15 ip-172-31-31-45 web[2307]:   â–² Next.js 15.3.1
+May  1 17:49:15 ip-172-31-31-45 web[2307]:   - Local:        http://localhost:8080
+May  1 17:49:15 ip-172-31-31-45 web[2307]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:15 ip-172-31-31-45 web[2307]: âœ“ Starting...
+May  1 17:49:15 ip-172-31-31-45 web[2307]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+May  1 17:49:16 ip-172-31-31-45 web[2325]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:16 ip-172-31-31-45 web[2325]: > next start
+May  1 17:49:17 ip-172-31-31-45 web[2345]:   â–² Next.js 15.3.1
+May  1 17:49:17 ip-172-31-31-45 web[2345]:   - Local:        http://localhost:8080
+May  1 17:49:17 ip-172-31-31-45 web[2345]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:17 ip-172-31-31-45 web[2345]: âœ“ Starting...
+May  1 17:49:17 ip-172-31-31-45 web[2345]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+May  1 17:49:18 ip-172-31-31-45 web[2363]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:18 ip-172-31-31-45 web[2363]: > next start
+May  1 17:49:18 ip-172-31-31-45 web[2382]:   â–² Next.js 15.3.1
+May  1 17:49:18 ip-172-31-31-45 web[2382]:   - Local:        http://localhost:8080
+May  1 17:49:18 ip-172-31-31-45 web[2382]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:18 ip-172-31-31-45 web[2382]: âœ“ Starting...
+May  1 17:49:19 ip-172-31-31-45 web[2382]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+May  1 17:49:19 ip-172-31-31-45 web[2403]: > cross-stitch-pattern@0.1.0 start
+May  1 17:49:19 ip-172-31-31-45 web[2403]: > next start
+May  1 17:49:20 ip-172-31-31-45 web[2424]:   â–² Next.js 15.3.1
+May  1 17:49:20 ip-172-31-31-45 web[2424]:   - Local:        http://localhost:8080
+May  1 17:49:20 ip-172-31-31-45 web[2424]:   - Network:      http://172.31.31.45:8080
+May  1 17:49:20 ip-172-31-31-45 web[2424]: âœ“ Starting...
+May  1 17:49:20 ip-172-31-31-45 web[2424]: [Error: Could not find a production build in the '.next' directory. Try building your app with 'next build' before starting the production server. https://nextjs.org/docs/messages/production-start-no-build-id]
+

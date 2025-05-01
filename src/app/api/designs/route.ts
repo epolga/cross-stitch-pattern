@@ -7,13 +7,13 @@ export async function GET() {
             id: "1",
             title: "Floral Design",
             description: "A beautiful floral cross-stitch pattern.",
-            photoUrl: "/images/placeholder-design.jpg"
+            photoUrl: "https://via.placeholder.com/150"
         },
         {
             id: "2",
             title: "Abstract Art",
             description: "A modern abstract cross-stitch design.",
-            photoUrl: "/images/placeholder-design.jpg"
+            photoUrl: "https://via.placeholder.com/150"
         }
     ];
     return NextResponse.json({ designs });

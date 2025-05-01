@@ -7,6 +7,34 @@
     <list default="true" id="db0e023d-3060-4d8e-abb2-7b68dbae5585" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.ebextensions/01_nextjs.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/01_nextjs.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/BUILD_ID" beforeDir="false" afterPath="$PROJECT_DIR$/.next/BUILD_ID" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/app-build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/app-build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/app-path-routes-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/app-path-routes-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/build-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/build-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" beforeDir="false" afterPath="$PROJECT_DIR$/.next/cache/webpack/client-production/index.pack.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/next-minimal-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/next-minimal-server.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/next-server.js.nft.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/next-server.js.nft.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/prerender-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/prerender-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app-paths-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/_not-found.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/_not-found.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/_not-found.rsc" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/_not-found.rsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/design.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/design.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/design.rsc" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/design.rsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/app/index.rsc" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/app/index.rsc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/404.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/pages/500.html" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/pages/500.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/.next/server/server-reference-manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/DAE05vbJtSFrP2swyPzdG/_buildManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/static/DAE05vbJtSFrP2swyPzdG/_ssgManifest.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.next/trace" beforeDir="false" afterPath="$PROJECT_DIR$/.next/trace" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/depoly_eb.bat" beforeDir="false" afterPath="$PROJECT_DIR$/depoly_eb.bat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/api/designs/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/api/designs/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/design/[id]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/design/[id]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +113,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746109780969</updated>
       <workItem from="1746109782412" duration="2022000" />
-      <workItem from="1746120163082" duration="4453000" />
+      <workItem from="1746120163082" duration="5659000" />
     </task>
     <servers />
   </component>
