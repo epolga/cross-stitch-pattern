@@ -178,3 +178,8 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 >>>>>>> b55c847 (Initial commit from Create Next App)
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
