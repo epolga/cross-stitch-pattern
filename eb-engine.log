@@ -1,0 +1,102 @@
+/var/log/eb-engine.log
+----------------------------------------
+2025/05/01 19:02:19.807728 [INFO] reading event message file
+2025/05/01 19:02:19.808027 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 19:02:19.896190 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 19:02:20.191050 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 19:02:20.512449 [INFO] checking whether command app-deploy is applicable to this instance...
+2025/05/01 19:02:20.512464 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 19:02:20.512468 [INFO] Engine command: (app-deploy)
+
+2025/05/01 19:02:20.512473 [INFO] Downloading EB Application...
+2025/05/01 19:02:20.512476 [INFO] Region: us-east-1
+2025/05/01 19:02:20.512478 [INFO] envID: e-gqvgsjamyt
+2025/05/01 19:02:20.512481 [INFO] envBucket: elasticbeanstalk-us-east-1-358174257684
+2025/05/01 19:02:20.512482 [INFO] accountID: 358174257684
+2025/05/01 19:02:20.512485 [INFO] Using manifest file name from command request
+2025/05/01 19:02:20.512490 [INFO] Manifest name is : manifest_1746126088047
+2025/05/01 19:02:20.512496 [INFO] Download app version manifest
+2025/05/01 19:02:20.512676 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/versions/manifest_1746126088047, expected bucket owner: 358174257684
+2025/05/01 19:02:20.585566 [INFO] Download successful164bytes downloaded
+2025/05/01 19:02:20.585734 [INFO] Trying to read and parse version manifest...
+2025/05/01 19:02:20.586251 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/_versions/cross-stitch-pattern/app-6e20-250501_220105025045, expected bucket owner: 358174257684
+2025/05/01 19:02:20.709515 [INFO] Download successful4769073bytes downloaded
+2025/05/01 19:02:20.715098 [INFO] Executing instruction: ElectLeader
+2025/05/01 19:02:20.715109 [INFO] Running leader election for instance i-07072ab33a3598507...
+2025/05/01 19:02:20.715112 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2025/05/01 19:02:20.715122 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id b17c9973-78de-4d1c-8583-35e8f367418a --listener-id i-07072ab33a3598507 --region us-east-1
+2025/05/01 19:02:21.000793 [INFO] Instance is Leader.
+2025/05/01 19:02:21.000855 [INFO] Executing instruction: stopSqsd
+2025/05/01 19:02:21.000861 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2025/05/01 19:02:21.000864 [INFO] Executing instruction: PreBuildEbExtension
+2025/05/01 19:02:21.000868 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2025/05/01 19:02:21.000882 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
+2025/05/01 19:02:21.964825 [INFO] Error occurred during build: Command 01_install_dependencies failed
+
+2025/05/01 19:02:21.964855 [ERROR] An error occurred during execution of command [app-deploy] - [PreBuildEbExtension]. Stop running the command. Error: EbExtension build failed. Please refer to /var/log/cfn-init.log for more details. 
+
+2025/05/01 19:02:21.964859 [INFO] Executing cleanup logic
+2025/05/01 19:02:21.964956 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1746126141964,"severity":"ERROR"}]}]}
+
+2025/05/01 19:02:21.965145 [INFO] Platform Engine finished execution on command: app-deploy
+
+2025/05/01 19:05:00.547573 [INFO] Starting...
+2025/05/01 19:05:00.547627 [INFO] Starting EBPlatform-PlatformEngine
+2025/05/01 19:05:00.547650 [INFO] reading event message file
+2025/05/01 19:05:00.547990 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 19:05:00.635069 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 19:05:00.948183 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 19:05:01.279081 [INFO] checking whether command app-deploy is applicable to this instance...
+2025/05/01 19:05:01.279100 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 19:05:01.279106 [INFO] Engine command: (app-deploy)
+
+2025/05/01 19:05:01.279111 [INFO] Downloading EB Application...
+2025/05/01 19:05:01.279114 [INFO] Region: us-east-1
+2025/05/01 19:05:01.279117 [INFO] envID: e-gqvgsjamyt
+2025/05/01 19:05:01.279128 [INFO] envBucket: elasticbeanstalk-us-east-1-358174257684
+2025/05/01 19:05:01.279131 [INFO] accountID: 358174257684
+2025/05/01 19:05:01.279140 [INFO] Using manifest file name from command request
+2025/05/01 19:05:01.279148 [INFO] Manifest name is : manifest_1746126232933
+2025/05/01 19:05:01.279150 [INFO] Download app version manifest
+2025/05/01 19:05:01.280967 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/versions/manifest_1746126232933, expected bucket owner: 358174257684
+2025/05/01 19:05:01.318609 [INFO] Download successful118bytes downloaded
+2025/05/01 19:05:01.318894 [INFO] Trying to read and parse version manifest...
+2025/05/01 19:05:01.319555 [INFO] Downloading: bucket: elasticbeanstalk-us-east-1-358174257684, object: resources/environments/e-gqvgsjamyt/_runtime/_versions/cross-stitch-pattern/app-4e2a-250501_220334240129, expected bucket owner: 358174257684
+2025/05/01 19:05:01.432571 [INFO] Download successful4252675bytes downloaded
+2025/05/01 19:05:01.436356 [INFO] Executing instruction: ElectLeader
+2025/05/01 19:05:01.436374 [INFO] Running leader election for instance i-07072ab33a3598507...
+2025/05/01 19:05:01.436377 [INFO] Calling the cfn-elect-cmd-leader to elect the command leader.
+2025/05/01 19:05:01.436390 [INFO] Running command: /opt/aws/bin/cfn-elect-cmd-leader --stack arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f --command-name ElasticBeanstalkCommand-AWSEBAutoScalingGroup --invocation-id b795d280-4d48-422c-a317-e93b69d45616 --listener-id i-07072ab33a3598507 --region us-east-1
+2025/05/01 19:05:01.809591 [INFO] Instance is Leader.
+2025/05/01 19:05:01.809650 [INFO] Executing instruction: stopSqsd
+2025/05/01 19:05:01.809655 [INFO] This is a web server environment instance, skip stop sqsd daemon ...
+2025/05/01 19:05:01.809658 [INFO] Executing instruction: PreBuildEbExtension
+2025/05/01 19:05:01.809662 [INFO] Starting executing the config set Infra-EmbeddedPreBuild.
+2025/05/01 19:05:01.809674 [INFO] Running command: /opt/aws/bin/cfn-init -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1 --configsets Infra-EmbeddedPreBuild
+2025/05/01 19:05:02.917346 [INFO] Error occurred during build: Command 01_install_dependencies failed
+
+2025/05/01 19:05:02.917374 [ERROR] An error occurred during execution of command [app-deploy] - [PreBuildEbExtension]. Stop running the command. Error: EbExtension build failed. Please refer to /var/log/cfn-init.log for more details. 
+
+2025/05/01 19:05:02.917380 [INFO] Executing cleanup logic
+2025/05/01 19:05:02.917452 [INFO] CommandService Response: {"status":"FAILURE","api_version":"1.0","results":[{"status":"FAILURE","msg":"Engine execution has encountered an error.","returncode":1,"events":[{"msg":"Instance deployment failed. For details, see 'eb-engine.log'.","timestamp":1746126302917,"severity":"ERROR"}]}]}
+
+2025/05/01 19:05:02.918349 [INFO] Platform Engine finished execution on command: app-deploy
+
+2025/05/01 19:06:48.893090 [INFO] Starting...
+2025/05/01 19:06:48.893134 [INFO] Starting EBPlatform-PlatformEngine
+2025/05/01 19:06:48.893155 [INFO] reading event message file
+2025/05/01 19:06:48.893439 [INFO] Engine received EB command cfn-hup-exec
+
+2025/05/01 19:06:48.957820 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBAutoScalingGroup --region us-east-1
+2025/05/01 19:06:49.258279 [INFO] Running command: /opt/aws/bin/cfn-get-metadata -s arn:aws:cloudformation:us-east-1:358174257684:stack/awseb-e-gqvgsjamyt-stack/9751c330-26a6-11f0-9f94-0affd9d2463f -r AWSEBBeanstalkMetadata --region us-east-1
+2025/05/01 19:06:49.548400 [INFO] checking whether command tail-log is applicable to this instance...
+2025/05/01 19:06:49.548413 [INFO] this command is applicable to the instance, thus instance should execute command
+2025/05/01 19:06:49.548418 [INFO] Engine command: (tail-log)
+
+2025/05/01 19:06:49.548610 [INFO] Executing instruction: GetTailLogs
+2025/05/01 19:06:49.548615 [INFO] Tail Logs...
+2025/05/01 19:06:49.549044 [INFO] Running command: tail -n 100 /var/log/nginx/error.log
+2025/05/01 19:06:49.551361 [INFO] Running command: tail -n 100 /var/log/web.stdout.log
+2025/05/01 19:06:49.553337 [INFO] Running command: tail -n 100 /var/log/eb-engine.log
