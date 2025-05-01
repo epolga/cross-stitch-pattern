@@ -4,7 +4,102 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0e023d-3060-4d8e-abb2-7b68dbae5585" name="Changes" comment="" />
+    <list default="true" id="db0e023d-3060-4d8e-abb2-7b68dbae5585" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.ebextensions/01_nextjs.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/designs/[id]/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/api/designs/route.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/design/[id]/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/design/page.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/AUTO_MERGE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/COMMIT_EDITMSG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/FETCH_HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/MERGE_MSG" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/ORIG_HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/REBASE_HEAD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/config" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/description" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/applypatch-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/commit-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/fsmonitor-watchman.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/post-update.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-applypatch.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-commit.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-merge-commit.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-push.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-rebase.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/pre-receive.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/prepare-commit-msg.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/push-to-checkout.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/hooks/update.sample" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/info/exclude" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/00/39b07805a6fc87928a7c0126daead3ddda69f3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/00/4145cddf3f9db91b57b9cb596683c8eb420862" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/03/88a71d0396339d6b200a066eefbecdc1484d35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/03/d9549ea8e4ada36fb3ecbc30fef08175b7d728" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/0b/872d82d9c39f70bff219b3b4b60145430f8984" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/11/70717c1478bdeb91fe179e892ee76371ff88de" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/1b/3be0840f3f6a2bc663b53f4b17d05d2d924df6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/1c/2fda565b94d0f2b94cb65ba7cca866e7a25478" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/26/eb87ed9edbabd0abafbcba0b166ae94c565d38" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/34/771f5364585eb7f3a52c634b269f58db871ad6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/42/fc323e4b835cde834aba978ce44ce65bf8fb71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/51/74b28c565c285e3e312ec5178be64fbeca8398" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/56/7f17b0d7c7fb662c16d4357dd74830caf2dccb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/5e/f6a520780202a1d6addd833d800ccb1ecac0bb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/66/c129fc6011c428f63f824e924ae2a052154e66" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/71/8d6fea4835ec2d246af9800eddb7ffb276240c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/77/053960334e2e34dc584dea8019925c3b4ccca9" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/78/c657698dcf3b975dbf00afa865fa7887c5829a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/83/5c5534502ebf09a14bc514e397267aa0765323" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/84/af2cb0e607ae0c0820d45757eb35fbfc048e2b" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/a1/1c8f317488813491b465830a551b88562859b6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/a1/3e587745d33259f5d51cfb2040fed6abd58efb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/aa/798b81980b508fa0723db410df57cdbdd344ac" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/b2/b2a44f6ebc70c450043c05a002e7a93ba5d651" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/b5/5c847b4eeea8a166d4bff4ed0174ce9987b480" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/bb/d6eda93eeedda7b5850a74647cbe1ac104e3ae" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/c1/334095f876a408c10f2357faaced969ec090ab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/c8/397c94c0e3faf3de616326ba8901e97fca11ca" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/c8/4637eaa8bcecc0fdd9bb7ca4769416ee93a925" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/c8/5fb67c463f20d1ee449b0ffee725a61dfb9259" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/c8/8f389de09f418da376598c42e8788d4fb6d172" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/d7/c1d24ab5c4741f7dfb15f483033f8e745c2ad7" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/e2/15bc4ccf138bbc38ad58ad57e92135484b3c0f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/e2/c7a5a38f3ab1a270f2a6f4d49d868db473a922" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/e3/734be15e1f6fbb4b207761c8e424b77cf3a4eb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/e9/ffa3083ad279ecf95fd8eae59cb253e9a539c4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/objects/f4/34dcf2bc8f37158692f8623b8d89fe23a6501d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/author-script" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/done" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/drop_redundant_commits" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/end" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/git-rebase-todo" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/git-rebase-todo.backup" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/head-name" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/interactive" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/message" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/msgnum" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/no-reschedule-failed-exec" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/onto" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/orig-head" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/rebase-merge/stopped-sha" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/refs/heads/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git/refs/remotes/origin/main" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/next.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/next.config.mjs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/page.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,22 +108,22 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "epolga"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;epolga&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/epolga/cross-stitch-pattern.git",
-    "accountId": "b4cb2487-0e2e-4105-91d7-d34a73ccf45c"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/epolga/cross-stitch-pattern.git&quot;,
+    &quot;accountId&quot;: &quot;b4cb2487-0e2e-4105-91d7-d34a73ccf45c&quot;
   }
-}]]></component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 6
-}]]></component>
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2wUx6jEGkTGsZZn8emXzjPRzQvk" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +143,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "D:\\ann\\Git\\cross-stitch-pattern\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -81,6 +177,7 @@
       <option name="presentableId" value="Default" />
       <updated>1746109780969</updated>
       <workItem from="1746109782412" duration="2022000" />
+      <workItem from="1746120163082" duration="3501000" />
     </task>
     <servers />
   </component>
