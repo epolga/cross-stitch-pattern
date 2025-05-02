@@ -27,13 +27,13 @@ export default function DesignPage({ params }: { params: { id: string } }) {
 
     return (
         <div className="container mx-auto p-4">
-            <h1 className="text-3xl font-bold mb-4">{design.title}</h1>
+            <h1 className="text-3xl font-bold mb-4">{design.Caption}</h1>
             <img
-                src={design.photoUrl}
-                alt={design.title}
+                src={design.ImageUrl || design.Caption}
+                alt={design.Caption}
                 className="w-full max-w-md h-auto rounded mb-4"
             />
-            <p className="text-gray-600 mb-4">{design.description}</p>
+            <p className="text-gray-600 mb-4">{design.Description}</p>
             <a href="/design" className="text-blue-600 hover:underline">
                 Back to Designs
             </a>
