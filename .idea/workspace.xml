@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="db0e023d-3060-4d8e-abb2-7b68dbae5585" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.ebextensions/01_nextjs.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/01_nextjs.config" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -51,7 +52,7 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "D:\\ann\\Git\\cross-stitch-pattern\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2025.1\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
