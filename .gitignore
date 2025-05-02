@@ -17,6 +17,9 @@
 .next/cache/  # Exclude only the cache subdirectory
 /out/
 
+# web storm
+.idea/*
+
 # production
 /build
 

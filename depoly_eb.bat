@@ -18,8 +18,8 @@ call npm install
 echo Building application
 call npm run build
 
-echo Creating ZIP archive
-zip -r app-%TIMESTAMP%.zip . -x "node_modules/*" ".next/*" ".git/*"
+:: echo Creating ZIP archive
+:: zip -r app-%TIMESTAMP%.zip . -x "node_modules/*" ".next/*" ".git/*"
 
 :: Deploy to Elastic Beanstalk
 echo Deploying to Elastic Beanstalk
