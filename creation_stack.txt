@@ -1,0 +1,60 @@
+May 2, 2025 19:24:27 (UTC+3)
+ERROR
+Create environment operation is complete, but with errors. For more information, see troubleshooting documentation.
+May 2, 2025 19:23:24 (UTC+3)
+INFO
+Command execution completed on all instances. Summary: [Successful: 0, Failed: 1].
+May 2, 2025 19:23:24 (UTC+3)
+ERROR
+[Instance: i-08dac4f26ed126dd8] Command failed on instance. Return code: 1 Output: Engine execution has encountered an error..
+May 2, 2025 19:23:23 (UTC+3)
+ERROR
+Instance deployment failed. For details, see 'eb-engine.log'.
+May 2, 2025 19:22:57 (UTC+3)
+INFO
+Added instance [i-08dac4f26ed126dd8] to your environment.
+May 2, 2025 19:22:48 (UTC+3)
+INFO
+Created Load Balancer listener named: arn:aws:elasticloadbalancing:us-east-1:358174257684:listener/app/awseb--AWSEB-BtNzXXgN6KDv/654ea505c2913d4a/25dacb426bd2766c
+May 2, 2025 19:22:31 (UTC+3)
+INFO
+Created load balancer named: arn:aws:elasticloadbalancing:us-east-1:358174257684:loadbalancer/app/awseb--AWSEB-BtNzXXgN6KDv/654ea505c2913d4a
+May 2, 2025 19:20:43 (UTC+3)
+INFO
+Created CloudWatch alarm named: awseb-e-2nmeqq3brs-stack-AWSEBCloudwatchAlarmHigh-ACUR3apSe7m2
+May 2, 2025 19:20:43 (UTC+3)
+INFO
+Created CloudWatch alarm named: awseb-e-2nmeqq3brs-stack-AWSEBCloudwatchAlarmLow-TrZnzjfsMEqS
+May 2, 2025 19:20:43 (UTC+3)
+INFO
+Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:358174257684:scalingPolicy:46316bcb-d298-4fe3-83de-da194d786c1f:autoScalingGroupName/awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingGroup-DXQbhNZuwNWV:policyName/awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingScaleUpPolicy-9XrfN8bZfRrQ
+May 2, 2025 19:20:43 (UTC+3)
+INFO
+Created Auto Scaling group policy named: arn:aws:autoscaling:us-east-1:358174257684:scalingPolicy:a47c35d2-f0d4-4d9c-a25d-996cc6620b4d:autoScalingGroupName/awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingGroup-DXQbhNZuwNWV:policyName/awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingScaleDownPolicy-KvZoUiIx8Wvh
+May 2, 2025 19:20:27 (UTC+3)
+INFO
+Waiting for EC2 instances to launch. This may take a few minutes.
+May 2, 2025 19:20:27 (UTC+3)
+INFO
+Created Auto Scaling group named: awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingGroup-DXQbhNZuwNWV
+May 2, 2025 19:20:12 (UTC+3)
+INFO
+Created Auto Scaling launch configuration named: awseb-e-2nmeqq3brs-stack-AWSEBAutoScalingLaunchConfiguration-Y2WMMVFOcxzF
+May 2, 2025 19:20:12 (UTC+3)
+INFO
+Created security group named: awseb-e-2nmeqq3brs-stack-AWSEBSecurityGroup-O4kDaaMvRuDx
+May 2, 2025 19:20:12 (UTC+3)
+INFO
+Created target group named: arn:aws:elasticloadbalancing:us-east-1:358174257684:targetgroup/awseb-AWSEB-8PXNANJD3TCJ/11ed7334c65bdb4a
+May 2, 2025 19:19:57 (UTC+3)
+INFO
+Environment health has transitioned to Pending. Initialization in progress (running for 17 seconds). There are no instances.
+May 2, 2025 19:19:56 (UTC+3)
+INFO
+Created security group named: sg-08247bc9c75c6d774
+May 2, 2025 19:19:34 (UTC+3)
+INFO
+Using elasticbeanstalk-us-east-1-358174257684 as Amazon S3 storage bucket for environment data.
+May 2, 2025 19:19:33 (UTC+3)
+INFO
+createEnvironment is starting.

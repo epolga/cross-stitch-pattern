@@ -1,0 +1,1 @@
+eb create cross-stitch-pattern-env --platform "Node.js 20 running on 64bit Amazon Linux 2023" --region us-east-1 --instance_type t3.medium
